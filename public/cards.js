@@ -11,12 +11,9 @@
 			if (Detector.webgl) {
 				renderer = new THREE.WebGLRenderer({
 					antialias: true,	// to get smoother output
-					preserveDrawingBuffer: true	// to allow screenshot
+					alpha: true
 				});
-				// uncomment if webgl is required
-				//}else{
-				//	Detector.addGetWebGLMessage();
-				//	return true;
+				renderer.setClearColor(0xffffff, 0);
 			} else {
 				renderer = new THREE.CanvasRenderer();
 			}
